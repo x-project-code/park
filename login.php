@@ -169,6 +169,15 @@ closeDBConnection($conn);
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>Login - Parking System</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0F2854">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
     <?php include 'protection.php'; ?>
     <style>
         .login-container {
@@ -463,4 +472,3 @@ closeDBConnection($conn);
     </script>
 </body>
 </html>
-
